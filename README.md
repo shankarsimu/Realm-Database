@@ -1,6 +1,6 @@
 # Simple REALM Database In Android
 
-## Configuring Realm in Android
+### Configuring Realm in Android
 Add the following classpath in your root build.gradle file:
 
 ```sh
@@ -19,7 +19,7 @@ Add the following plugin to the app’s build.gradle
 
 apply plugin: 'realm-android'
 ```
-Creating a Realm Instance
+### Creating a Realm Instance
 
 To create a Realm instance we do the following:
 
@@ -39,12 +39,12 @@ RealmConfiguration config =
                         .build();
 
 ```
-Creating Realm Model class
+### Creating Realm Model class
 
 To create Model classes, extend them with RealmObject.
 Primary keys can be of String or integer type and are annotated with @PrimaryKey annotation.
 
-Following are some annotations commonly used on Realm Model classes:
+### Following are some annotations commonly used on Realm Model classes:
  
 @PrimaryKey
 @Required – Cannot be null
@@ -86,7 +86,7 @@ RealmResults<RealModelClass> results = realm.where(RealModelClass.class).findAll
 ```
 Again it’s a good practice to use this inside the execute method.
 
-Delete From Realm
+###### Delete From Realm
 ```sh
 
 mRealm.executeTransaction(new Realm.Transaction() {
@@ -97,12 +97,44 @@ mRealm.executeTransaction(new Realm.Transaction() {
             }
         });
 ```
-Following are the other methods that can be used to delete the results:
+###### Following are the other methods that can be used to delete the results:
 
-android realm delete functions
+###### android realm delete functions
 
 RealmList is a built-in collection of RealmObjects and is used for model one-to-many relationships.
 
 RealmList cannot support non-realm objects(such as Long, String, Integer).
 
 In the following section, we’ll be creating a basic Android Application which uses Realm and performs CRUD operations.
+
+
+
+
+## License
+
+MIT
+
+**Free Software, Hell Yeah!**
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+
+   [dill]: <https://github.com/joemccann/dillinger>
+   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
+   [john gruber]: <http://daringfireball.net>
+   [df1]: <http://daringfireball.net/projects/markdown/>
+   [markdown-it]: <https://github.com/markdown-it/markdown-it>
+   [Ace Editor]: <http://ace.ajax.org>
+   [node.js]: <http://nodejs.org>
+   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
+   [jQuery]: <http://jquery.com>
+   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
+   [express]: <http://expressjs.com>
+   [AngularJS]: <http://angularjs.org>
+   [Gulp]: <http://gulpjs.com>
+
+   [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
+   [PlGh]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
+   [PlGd]: <https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md>
+   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
+   [PlMe]: <https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md>
+   
